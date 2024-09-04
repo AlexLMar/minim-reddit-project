@@ -1,0 +1,29 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #DAE0E6;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  margin-top: 50px; /* To account for the fixed header */
+  padding: 20px;
+}
+
+.feed {
+  flex: 1;
+  margin-right: 250px; /* Width of the sidebar */
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .feed {
+    margin-right: 0;
+  }
+}
