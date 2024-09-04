@@ -1,29 +1,43 @@
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #DAE0E6;
+  height: 100vh;
+  background-color: #F0F2F5;
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow: hidden;
 }
 
 .content {
   display: flex;
   flex: 1;
-  margin-top: 50px; /* To account for the fixed header */
-  padding: 20px;
+  margin-top: 60px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  overflow: hidden;
 }
 
-.feed {
+.feedContainer {
   flex: 1;
-  margin-right: 250px; /* Width of the sidebar */
+  margin-right: 24px;
+  overflow-y: auto;
+  padding: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.feedContainer::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
-    padding: 10px;
   }
 
-  .feed {
+  .feedContainer {
     margin-right: 0;
+    margin-bottom: 20px;
   }
 }

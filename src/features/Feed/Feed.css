@@ -1,66 +1,89 @@
 .feed {
-  max-width: 800px;
   width: 100%;
-  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 16px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.feed::-webkit-scrollbar {
+  display: none;
+}
+
+.feed h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #1c1c1c;
+  border-bottom: 2px solid #0079d3;
+  padding-bottom: 10px;
 }
 
 .post {
   background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 15px;
-  margin-bottom: 15px;
-  transition: box-shadow 0.3s ease;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .post:hover {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .post h3 {
   font-size: 18px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #1c1c1c;
+  line-height: 1.4;
 }
 
 .post p {
   font-size: 14px;
   color: #7c7c7c;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .post a {
   color: #0079d3;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.2s;
 }
 
 .post a:hover {
+  color: #005fa3;
   text-decoration: underline;
 }
 
 .post-image {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
 .load-more-button {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   background-color: #0079d3;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.1s;
 }
 
 .load-more-button:hover {
   background-color: #005fa3;
+  transform: translateY(-1px);
 }
 
 .load-more-button:disabled {

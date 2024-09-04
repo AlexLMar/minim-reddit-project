@@ -38,7 +38,9 @@ function App() {
     <div className={styles.app}>
       <Header setSearchTerm={handleSetSearchTerm} toggleSidebar={handleToggleSidebar} />
       <div className={styles.content}>
-        <Feed subreddit={subreddit} searchTerm={searchTerm} />
+        <div className={styles.feedContainer}>
+          <Feed subreddit={subreddit} searchTerm={searchTerm} />
+        </div>
         <Sidebar 
           onSubredditChange={handleSubredditChange} 
           isOpen={isMobile ? isSidebarOpen : true}
